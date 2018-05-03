@@ -3,7 +3,8 @@ package m;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Sector {
+
+public class Sector  {
 	//Atributos
 	private int alto;
 	private int ancho;
@@ -12,8 +13,6 @@ public class Sector {
 	private static final Color colorSinPulsar= Color.red;
 	private static final Color colorPulsado=Color.blue;
 	private boolean pulsado=false;
-	private static int numero=0;
-	private int numero2=numero;
 	
 	//Constructores-----------------------------------------------------------------
 	public Sector(int alto, int ancho, int posicionX, int posicionY) {
@@ -21,8 +20,7 @@ public class Sector {
 		this.ancho=ancho;
 		this.posicionX=posicionX;
 		this.posicionY=posicionX;
-		this.numero++;
-		System.out.println("Uno mas");
+		//System.out.println("Uno mas");
 	}
 	//Metodos-----------------------------------------------------------------------
 	public void CambiarColor() {
@@ -30,7 +28,7 @@ public class Sector {
 		else this.getColorSinPulsar();
 	}
 	public void pintarSector(Graphics g) {
-		g.drawRect(getPosicionX(), getPosicionY(), getAncho(), getAlto());
+		g.drawRect(400, 400, 80, 80);
 	}
 	//Getters/Setters---------------------------------------------------------------
 	public boolean isPulsado() {
@@ -69,4 +67,5 @@ public class Sector {
 	public Color getColorPulsado() {
 		return colorPulsado;
 	}
+	
 }
